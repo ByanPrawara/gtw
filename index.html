@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kimbap Delight - Pesan Kimbap Lezat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-image {
+            height: 300px;
+            background: linear-gradient(45deg, #ff6b6b, #ffa502);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-info h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+        
+        .product-info p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 20px 0;
+        }
+        
+        .delivery-options {
+            margin: 25px 0;
+        }
+        
+        .delivery-options h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .option {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option:hover {
+            border-color: #ff6b6b;
+        }
+        
+        .option.selected {
+            border-color: #ff6b6b;
+            background-color: #fff5f5;
+        }
+        
+        .option h4 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .option p {
+            color: #ff6b6b;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        .order-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #ff6b6b, #ffa502);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        .order-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+        
+        .feature h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .feature p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .product-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇰🇷 Kimbap Delight 🍱</h1>
+            <p>Nikmati kimbap lezat dengan bahan berkualitas tinggi, langsung dari dapur Korea ke meja Anda!</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="product-card">
+                <div class="product-image">
+                    KIMBAP LEZAT
+                </div>
+                <div class="product-info">
+                    <h2>Kimbap Spesial</h2>
+                    <p>Kimbap tradisional Korea dengan isian lengkap: wortel, timun, telur orak-arik, daging sapi, dan rumput laut berkualitas. Dibungkus dengan nasi pulen yang lembut dan nori yang renyah.</p>
+                    
+                    <div class="price">Rp 15.000</div>
+                    
+                    <div class="delivery-options">
+                        <h3>Pilihan Pengiriman:</h3>
+                        <div class="options">
+                            <div class="option" onclick="selectOption(this, 'ambil', 0)">
+                                <h4>Ambil Sendiri</h4>
+                                <p>Rp 0 (Gratis)</p>
+                                <small>Ambil di lokasi kami</small>
+                            </div>
+                            <div class="option" onclick="selectOption(this, 'antar', 5000)">
+                                <h4>Diantar</h4>
+                                <p>+ Rp 5.000</p>
+                                <small>Gratis ongkir untuk pesanan > Rp 50.000</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="order-button" onclick="placeOrder()">
+                        Pesan Sekarang via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div>🍱</div>
+                <h3>Bahan Berkualitas</h3>
+                <p>Menggunakan bahan segar dan berkualitas tinggi untuk rasa terbaik</p>
+            </div>
+            <div class="feature">
+                <div>🚚</div>
+                <h3>Pengiriman Cepat</h3>
+                <p>Antar dalam 30 menit atau ambil langsung di lokasi</p>
+            </div>
+            <div class="feature">
+                <div>😊</div>
+                <h3>Pelayanan Ramah</h3>
+                <p>Tim kami siap melayani dengan sepenuh hati</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Kimbap Delight. Semua hak dilindungi.</p>
+            <p>Hubungi kami: +62 823-1830-7790</p>
+        </footer>
+    </div>
+
+    <script>
+        let selectedOption = 'ambil';
+        let deliveryCost = 0;
+        
+        function selectOption(element, option, cost) {
+            // Remove selected class from all options
+            document.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Update selected option and cost
+            selectedOption = option;
+            deliveryCost = cost;
+        }
+        
+        function placeOrder() {
+            const basePrice = 15000;
+            const totalPrice = basePrice + deliveryCost;
+            
+            let message = "Halo, saya ingin memesan Kimbap Spesial:\n";
+            message += `- Kimbap Spesial: Rp ${basePrice.toLocaleString('id-ID')}\n`;
+            message += `- Pengiriman: ${selectedOption === 'ambil' ? 'Ambil Sendiri (Gratis)' : 'Diantar (Rp 5.000)'}\n`;
+            message += `- Total: Rp ${totalPrice.toLocaleString('id-ID')}\n\n`;
+            message += "Mohon informasi lebih lanjut untuk pemesanan.";
+            
+            const whatsappUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+        
+        // Select default option
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.option:first-child').classList.add('selected');
+        });
+    </script>
+</body>
+</html>
